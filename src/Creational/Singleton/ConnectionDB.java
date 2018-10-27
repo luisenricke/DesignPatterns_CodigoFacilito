@@ -6,7 +6,7 @@ public class ConnectionDB {
     private ConnectionDB() {
     }
 
-    public static ConnectionDB instance() {
+    public synchronized static ConnectionDB instance() {
         if (conn == null)
             conn = new ConnectionDB();
         return conn;
